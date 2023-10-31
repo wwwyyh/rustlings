@@ -7,12 +7,14 @@
 // Execute `rustlings hint modules2` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
+// When we bring a name into scope with the use keyword, the name available in the new scope is private. 
+// To enable the code that calls our code to refer to that name as if it had been defined in that code’s scope, 
+// we can combine pub and use. 
 mod delicious_snacks {
     // TODO: Fix these use statements
-    use self::fruits::PEAR as ???
-    use self::veggies::CUCUMBER as ???
+    pub use self::fruits::PEAR as fruit; // re-exporting 
+    pub use self::veggies::CUCUMBER as veggie;
 
     mod fruits {
         pub const PEAR: &'static str = "Pear";
