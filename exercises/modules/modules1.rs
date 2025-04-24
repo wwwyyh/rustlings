@@ -10,12 +10,12 @@ mod sausage_factory {
         String::from("Ginger")
     }
 
-    pub fn make_sausage() { //模块中的方法默认为私有
+    pub fn make_sausage() { //模块中的方法默认为私有方法
         get_secret_recipe();
         println!("sausage!");
     }
 }
 
 fn main() {
-    sausage_factory::make_sausage();
+    sausage_factory::make_sausage();//
 }
